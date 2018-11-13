@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Alto Giro</title>
+
+  <!-- build:css -->
+  <link rel="stylesheet" href="./css/main.css">
+  <!-- endbuild -->
+
+  <link rel="preload" href="./fonts/FuturaPT-Medium.woff2" as="font">
+  <link rel="preload" href="./fonts/FuturaPT-Demi.woff2" as="font">
+  <link rel="preload" href="./fonts/SofiaProLight.woff2" as="font">
+</head>
+<body>
+<header class="page-header">
+  <nav class="main-nav main-nav--open">
+    <button class="main-nav__toggle" type="button">Menu</button>
+
+    <ul class="main-nav__list">
+      <li><a class="main-nav__link" href="#">Activities</a></li>
+      <li><a class="main-nav__link" href="#">Tops</a></li>
+      <li><a class="main-nav__link" href="#">Bottoms</a></li>
+      <li><a class="main-nav__link" href="#">Accessories</a></li>
+      <li><a class="main-nav__link" href="#">Culture</a></li>
+    </ul>
+  </nav>
+
+  <a href="/" class="page-header__logo">AG</a>
+
+  <a class="page-header__cart">
+    <span class="page-header__text">Cart</span>
+    <span class="page-header__amount">0</span>
+  </a>
+</header>
+
+<main class="page-main">
+  <section class="hero">
+    <div class="hero__info product-info">
+      <p class="product-info__subtitle">Collection</p>
+      <h1 class="product-info__title product-info__title--big">Bikini — Mykonos</h1>
+      <p class="product-info__description">
+        The same top of the line accessories you’re used to but we have formulated these specifically for your activite lifestyle.
+      </p>
+
+      <form class="hero-form" action="#" method="post">
+        <div class="hero-form__select-wrapper">
+          <select class="hero-form__select">
+            <option disabled selected hidden>Pick a color</option>
+            <option value="black">Black</option>
+            <option value="white">White</option>
+            <option value="pink">Pink</option>
+          </select>
+
+          <div class="hero-form__quantity">
+            <button class="hero-form__btn hero-form__btn-minus" type="button">-</button>
+            <input class="hero-form__amount" type="text" value="1">
+            <button class="hero-form__btn hero-form__btn-plus" type="button">+</button>
+          </div>
+        </div>
+
+        <button class="hero-form__button button" type="submit">Add to cart</button>
+      </form>
+    </div>
+
+    <div class="hero__slider-wrapper">
+      <div class="hero__slider-controls">
+        <div class="hero__slider">
+          <div class="hero__slide">
+            <picture>
+              <source type="image/webp" media="(min-width: 768px)"
+                      srcset="./img/desktop/hero_slider_1.webp 1x, ./img/desktop/hero_slider_1@2x.webp 2x, ./img/desktop/hero_slider_1@3x.webp 3x">
+              <source type="image/webp"
+                      srcset="./img/mobile/hero_slider_1_mobile.webp 1x, ./img/mobile/hero_slider_1_mobile@2x.webp 2x, ./img/mobile/hero_slider_1_mobile@3x.webp 3x">
+
+              <source media="(min-width: 768px)"
+                      srcset="./img/desktop/hero_slider_1.jpg 1x, ./img/desktop/hero_slider_1@2x.jpg 2x, ./img/desktop/hero_slider_1@3x.jpg 3x">
+
+              <img class="hero__image" src="./img/mobile/hero_slider_1_mobile.jpg"
+                   srcset="./img/mobile/hero_slider_1_mobile@2x.jpg 2x, ./img/mobile/hero_slider_1_mobile@3x.jpg 3x" alt="Slider 1" width="300"
+                   height="499">
+            </picture>
+          </div>
+        </div>
+
+        <div class="hero__controls">
+          <button class="hero__slider-control">IMG 001</button>
+          <button class="hero__slider-control hero__slider-control--current">IMG 002</button>
+          <button class="hero__slider-control">IMG 003</button>
+        </div>
+      </div>
+    </div>
+
+    <ul class="hero-menu">
+      <li class="hero-menu__link">About this item</li>
+      <li class="hero-menu__link">Similar items</li>
+      <li class="hero-menu__link">Scroll down</li>
+    </ul>
+  </section>
+
+  <section class="content">
+    <div class="content__wrapper">
+      <div class="content__photo">
+        <picture>
+          <source type="image/webp" media="(min-width: 768px)"
+                  srcset="./img/desktop/photo_1.webp 1x, ./img/desktop/photo_1@2x.webp 2x, ./img/desktop/photo_1@3x.webp 3x">
+          <source type="image/webp"
+                  srcset="./img/mobile/photo_1_mobile.webp 1x, ./img/mobile/photo_1_mobile@2x.webp 2x, ./img/mobile/photo_1_mobile@3x.webp 3x">
+
+          <source media="(min-width: 768px)"
+                  srcset="./img/desktop/photo_1.jpg 1x, ./img/desktop/photo_1@2x.jpg 2x, ./img/desktop/photo_1@3x.jpg 3x">
+
+          <img class="content__image" src="./img/mobile/photo_1_mobile.jpg"
+               srcset="./img/mobile/photo_1_mobile@2x.jpg 2x, ./img/mobile/photo_1_mobile@3x.jpg 3x" alt="Photo 1" width="230" height="362">
+        </picture>
+      </div>
+
+      <div class="product-info">
+        <p class="product-info__subtitle">Bikini info</p>
+        <h1 class="product-info__title product-info__title--content">Mykonos</h1>
+        <p class="product-info__description product-info__description--line">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+          enim
+          ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate
+          esse cillum dolore eu fugiat nulla cillum dolore eu fugiat eu.
+        </p>
+        <p class="product-info__description product-info__description--line">
+          Are you interested and want to know more? Click the link below.
+        </p>
+
+        <a class="content__button button" href="#">About us</a>
+      </div>
+    </div>
+
+    <div class="content__promo">
+      <p class="content__promo-slogan">The highest quality</p>
+    </div>
+
+    <div class="content__wrapper">
+      <div class="product-info">
+        <p class="product-info__subtitle">High quality</p>
+        <h1 class="product-info__title product-info__title--content">Materials used</h1>
+
+        <ul class="product-info__items">
+          <li class="product-info__item">Material Item 001</li>
+          <li class="product-info__item">Material Item 002</li>
+          <li class="product-info__item">Material Item 003</li>
+          <li class="product-info__item">Material Item 004</li>
+          <li class="product-info__item">Material Item 005</li>
+        </ul>
+      </div>
+
+      <div class="content__photo">
+        <picture>
+          <source type="image/webp" media="(min-width: 768px)"
+                  srcset="./img/desktop/photo_2.webp 1x, ./img/desktop/photo_2@2x.webp 2x, ./img/desktop/photo_2@3x.webp 3x">
+          <source type="image/webp"
+                  srcset="./img/mobile/photo_2_mobile.webp 1x, ./img/mobile/photo_2_mobile@2x.webp 2x, ./img/mobile/photo_2_mobile@3x.webp 3x">
+
+          <source media="(min-width: 768px)"
+                  srcset="./img/desktop/photo_2.jpg 1x, ./img/desktop/photo_2@2x.jpg 2x, ./img/desktop/photo_2@3x.jpg 3x">
+
+          <img class="content__image" src="./img/mobile/photo_2_mobile.jpg"
+               srcset="./img/mobile/photo_2_mobile@2x.jpg 2x, ./img/mobile/photo_2_mobile@3x.jpg 3x" alt="Photo 2" width="230" height="362">
+        </picture>
+      </div>
+    </div>
+  </section>
+
+  <section class="similar">
+    <h2 class="similar__title">
+      <span class="similar__title--mobile">Similar </span>
+      <span class="similar__title--desktop">Related items</span>
+    </h2>
+
+    <div class="similar__wrapper">
+      <button class="similar__control similar__control--prev">prev item</button>
+
+      <div class="similar__slider">
+        <div style="display: none" class="similar__slide">
+          <picture>
+            <source type="image/webp" media="(min-width: 768px)"
+                    srcset="./img/desktop/slider_1.webp 1x, ./img/desktop/slider_1@2x.webp 2x, ./img/desktop/slider_1@3x.webp 3x">
+            <source type="image/webp"
+                    srcset="./img/mobile/slider_1_mobile.webp 1x, ./img/mobile/slider_1_mobile@2x.webp 2x, ./img/mobile/slider_1_mobile@3x.webp 3x">
+
+            <source media="(min-width: 768px)"
+                    srcset="./img/desktop/slider_1.jpg 1x, ./img/desktop/slider_1@2x.jpg 2x, ./img/desktop/slider_1@3x.jpg 3x">
+
+            <img class="similar__image" src="./img/mobile/slider_1_mobile.jpg"
+                 srcset="./img/mobile/slider_1_mobile@2x.jpg 2x, ./img/mobile/slider_1_mobile@3x.jpg 3x" alt="Slider 1" width="300"
+                 height="461">
+          </picture>
+
+          <div class="similar__product-name">BATHING SUIT 3 — $85</div>
+          <div class="similar__collection-name">New Swimwear Collection</div>
+        </div>
+
+        <div class="similar__slide">
+          <picture>
+            <source type="image/webp" media="(min-width: 768px)"
+                    srcset="./img/desktop/slider_2.webp 1x, ./img/desktop/slider_2@2x.webp 2x, ./img/desktop/slider_2@3x.webp 3x">
+            <source type="image/webp"
+                    srcset="./img/mobile/slider_2_mobile.webp 1x, ./img/mobile/slider_2_mobile@2x.webp 2x, ./img/mobile/slider_2_mobile@3x.webp 3x">
+
+            <source media="(min-width: 768px)"
+                    srcset="./img/desktop/slider_2.jpg 1x, ./img/desktop/slider_2@2x.jpg 2x, ./img/desktop/slider_2@3x.jpg 3x">
+
+            <img class="similar__image" src="./img/mobile/slider_2_mobile.jpg"
+                 srcset="./img/mobile/slider_2_mobile@2x.jpg 2x, ./img/mobile/slider_2_mobile@3x.jpg 3x" alt="Slider 2" width="300"
+                 height="461">
+          </picture>
+
+          <div class="similar__product-name">BATHING SUIT 1 — $55</div>
+          <div class="similar__collection-name">New Swimwear Collection</div>
+        </div>
+
+        <div style="display: none" class="similar__slide">
+          <picture>
+            <source type="image/webp" media="(min-width: 768px)"
+                    srcset="./img/desktop/slider_3.webp 1x, ./img/desktop/slider_3@2x.webp 2x, ./img/desktop/slider_3@3x.webp 3x">
+            <source type="image/webp"
+                    srcset="./img/mobile/slider_3_mobile.webp 1x, ./img/mobile/slider_3_mobile@2x.webp 2x, ./img/mobile/slider_3_mobile@3x.webp 3x">
+
+            <source media="(min-width: 768px)"
+                    srcset="./img/desktop/slider_3.jpg 1x, ./img/desktop/slider_3@2x.jpg 2x, ./img/desktop/slider_3@3x.jpg 3x">
+
+            <img class="similar__image" src="./img/mobile/slider_3_mobile.jpg"
+                 srcset="./img/mobile/slider_3_mobile@2x.jpg 2x, ./img/mobile/slider_3_mobile@3x.jpg 3x" alt="Slider 3" width="300"
+                 height="461">
+          </picture>
+
+          <div class="similar__product-name">BATHING SUIT 2 — $155</div>
+          <div class="similar__collection-name">New Swimwear Collection</div>
+        </div>
+      </div>
+
+      <button class="similar__control similar__control--next">next item</button>
+
+      <a class="similar__button button" href="#">View Item</a>
+    </div>
+  </section>
+</main>
+
+<footer class="page-footer">
+  <div class="page-footer__wrapper">
+    <a class="page-footer__logo" href="/">Alto giro</a>
+    <p class="page-footer__copyright">© 2017 Alto Giro, All rights reserved</p>
+  </div>
+
+  <ul class="page-footer__menu">
+    <li><a class="page-footer__menu-link" href="#">HOME</a></li>
+    <li><a class="page-footer__menu-link" href="#">ABOUT US</a></li>
+    <li><a class="page-footer__menu-link" href="#">CONTACT US</a></li>
+    <li><a class="page-footer__menu-link" href="#">CULTURE</a></li>
+  </ul>
+
+  <div class="page-footer__social social">
+    <ul class="social__list">
+      <li>
+        <a class="social__link social__link--facebook" href="https://www.facebook.com/geexarts">
+          <span class="visually-hidden">Facebook</span>
+        </a>
+      </li>
+
+      <li>
+        <a class="social__link social__link--twitter" href="https://twitter.com/GeexArts">
+          <span class="visually-hidden">Twitter</span>
+        </a>
+      </li>
+
+      <li>
+        <a class="social__link social__link--instagram" href="https://www.instagram.com/geexarts/">
+          <span class="visually-hidden">Instagram</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</footer>
+
+<!-- build:js -->
+<script src="./js/picturefill.min.js"></script>
+<script src="./js/main.js"></script>
+<!-- endbuild -->
+</body>
+</html>

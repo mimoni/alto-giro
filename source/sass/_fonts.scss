@@ -1,0 +1,32 @@
+@font-face {
+  font-family: "FuturaPT";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../fonts/FuturaPT-Medium.woff2") format("woff2"),
+    url("../fonts/FuturaPT-Medium.woff") format("woff"),
+    url("../fonts/FuturaPT-Medium.ttf") format("ttf"),
+    url("../fonts/FuturaPT-Medium.eot") format("eot");
+}
+
+@font-face {
+  font-family: "FuturaPT-Demi";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/FuturaPT-Demi.woff2") format("woff2"),
+    url("../fonts/FuturaPT-Demi.woff") format("woff"),
+    url("../fonts/FuturaPT-Demi.ttf") format("ttf"),
+    url("../fonts/FuturaPT-Demi.eot") format("eot");
+}
+
+@font-face {
+  font-family: "SofiaPro";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("../fonts/SofiaProLight.woff2") format("woff2"),
+    url("../fonts/SofiaProLight.woff") format("woff"),
+    url("../fonts/SofiaProLight.ttf") format("ttf"),
+    url("../fonts/SofiaProLight.eot") format("eot");
+}

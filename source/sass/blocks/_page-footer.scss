@@ -1,0 +1,67 @@
+.page-footer {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 22px;
+}
+
+.page-footer__menu {
+  @include list-reset;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 78%;
+  max-width: 445px;
+  padding: 0;
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.page-footer__menu-link {
+  @include futura-pt-demi;
+  color: $color-secondary-text;
+  text-decoration: none;
+  font-size: 8px;
+  line-height: 2.13;
+  display: block;
+
+  @include tablet {
+    font-size: 12px;
+    line-height: 2.08;
+  }
+}
+
+.page-footer__logo {
+  display: none;
+  text-transform: uppercase;
+  font-size: 25px;
+  line-height: normal;
+  letter-spacing: 8px;
+  text-decoration: none;
+  transition: 300ms;
+  color: $color-primary-text;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.page-footer__copyright {
+  @include sofia-pro;
+  font-size: 8px;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: $grey;
+  margin: 0;
+  text-transform: none;
+
+  @include tablet {
+    font-size: 14px;
+  }
+}
+
+.page-footer__wrapper {
+  order: 2;
+}

@@ -1,0 +1,218 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero__info {
+  order: 1;
+  position: relative;
+  padding-top: 122px;
+  padding-bottom: 180px;
+  margin-bottom: 50px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 125px;
+    background-color: $color-primary-text;
+    top: -18px;
+
+    @include centerX;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 125px;
+    background-color: $color-primary-text;
+    bottom: 0;
+
+    @include centerX;
+  }
+}
+
+.hero__slider-wrapper {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 40.3%;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    background-image: url("../img/mobile/hero_bg_mobile.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include retina {
+      background-image: url("../img/mobile/hero_bg_mobile@2x.png");
+    }
+
+    @include retina-3x {
+      background-image: url("../img/mobile/hero_bg_mobile@3x.png");
+    }
+
+    @include tablet {
+      background-image: url("../img/desktop/hero_bg.png");
+      background-position: top center;
+
+      @include retina {
+        background-image: url("../img/desktop/hero_bg@2x.png");
+      }
+
+      @include retina-3x {
+        background-image: url("../img/desktop/hero_bg@3x.png");
+      }
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 40px;
+    bottom: 40px;
+    width: 50%;
+    background-color: $color-bg;
+    z-index: -2;
+  }
+}
+
+.hero__slider-controls {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 74%;
+  max-width: 300px;
+
+  @include tablet {
+    max-width: initial;
+    width: 423px;
+  }
+}
+
+.hero__controls {
+  @include centerY;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  right: -7px;
+}
+
+.hero__slider-control {
+  @include futura-pt-demi;
+  border: none;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  line-height: 2;
+  font-size: 0;
+  margin-bottom: 20px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 15px;
+    right: 0;
+    background-color: $color-primary-text;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.hero__slider-control--current::after {
+  width: 32px;
+}
+
+.hero__slide {
+  padding-top: 81px;
+  padding-bottom: 77px;
+}
+
+.hero__image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.hero-menu {
+  @include list-reset;
+  display: none;
+}
+
+.hero-form {
+  margin-top: 19px;
+}
+
+.hero-form__select {
+  width: 66.5%;
+  font-size: 10px;
+  line-height: 2.6;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: solid 1px $color-primary-text;
+  padding-left: 8px;
+  padding-bottom: 3px;
+  letter-spacing: 4px;
+  background-color: transparent;
+
+  @include tablet {
+    font-size: 12px;
+  }
+}
+
+.hero-form__btn {
+  width: 23px;
+  height: 23px;
+  line-height: 21px;
+  border-radius: 50%;
+  border: solid 1px $color-secondary-text;
+  background-color: transparent;
+  box-sizing: border-box;
+  padding: 0;
+  font-size: 10px;
+
+  &:hover {
+    background-color: $color-bg;
+    cursor: pointer;
+  }
+
+  @include tablet {
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+  }
+}
+
+.hero-form__select-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero-form__quantity {
+  display: flex;
+  align-items: center;
+}
+
+.hero-form__amount {
+  box-sizing: border-box;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  text-align: center;
+  width: 26px;
+}
+
+.hero-form__button {
+  margin-top: 52px;
+  margin-left: auto;
+  margin-right: auto;
+}

@@ -1,0 +1,152 @@
+.similar {
+  max-width: 980px;
+  position: relative;
+  background-color: $color-bg;
+  text-align: center;
+  margin-top: 230px;
+  margin-bottom: 116px;
+  margin-left: auto;
+  margin-right: auto;
+
+  &::before {
+    @include centerX;
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 125px;
+    background-color: $color-primary-text;
+    top: -185px;
+  }
+}
+
+.similar__title {
+  display: block;
+  width: 100%;
+  font-size: 35px;
+  line-height: 1.29;
+  letter-spacing: 14px;
+  text-align: center;
+  position: absolute;
+  margin: 0;
+  top: 0;
+  transform: translateY(-50%);
+
+  &--desktop {
+    display: none;
+
+    @include tablet {
+      display: block;
+    }
+  }
+
+  &--mobile {
+    @include tablet {
+      display: none;
+    }
+  }
+}
+
+.similar__wrapper {
+  position: relative;
+  padding-top: 69px;
+}
+
+.similar__control {
+  @include futura-pt-demi;
+
+  position: absolute;
+  height: 24px;
+  font-size: 10px;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  top: 44%;
+  letter-spacing: 3px;
+  transform: rotate(-90deg);
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.7;
+  }
+
+  &--prev {
+    left: -10px;
+
+    @media (min-width: 485px) {
+      left: calc(50% - 230px);
+    }
+
+    @include tablet {
+      left: calc(50% + -320px);
+    }
+  }
+
+  &--next {
+    right: -10px;
+
+    @media (min-width: 485px) {
+      right: calc(50% - 230px);
+    }
+
+    @include tablet {
+      right: calc(50% + -320px);
+    }
+  }
+
+  @include tablet {
+    font-size: 12px;
+  }
+}
+
+.similar__image {
+  width: 76%;
+  max-width: 300px;
+
+  @include tablet {
+    max-width: none;
+    width: 426px;
+    height: 655px;
+    object-fit: contain;
+  }
+}
+
+.similar__product-name {
+  @include futura-pt-demi;
+
+  margin-top: 20px;
+  font-size: 12px;
+  line-height: normal;
+  letter-spacing: 4px;
+
+  @include tablet {
+    font-size: 14px;
+    line-height: 1.71;
+  }
+}
+
+.similar__collection-name {
+  @include sofia-pro;
+
+  font-size: 10px;
+  font-stretch: normal;
+  line-height: 2.4;
+  letter-spacing: 1px;
+  color: $color-secondary-text;
+  text-transform: none;
+  margin-bottom: 40px;
+
+  @include tablet {
+    font-size: 12px;
+  }
+}
+
+.similar__button {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  top: 18px;
+}

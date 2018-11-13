@@ -1,0 +1,77 @@
+.page-header {
+  width: 88.4%;
+  max-width: 500px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main-nav__toggle {
+  border: none;
+  background-color: transparent;
+  height: 13px;
+  font-size: 10px;
+  line-height: normal;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+}
+
+.page-header__logo {
+  @include centerX;
+  position: absolute;
+  color: $color-primary-text;
+  text-decoration: none;
+  font-size: 26px;
+  letter-spacing: -1px;
+  line-height: 19px;
+}
+
+.page-header__cart {
+  display: flex;
+  font-size: 10px;
+  line-height: 13px;
+  align-items: center;
+}
+
+.page-header__amount {
+  display: flex;
+  letter-spacing: normal;
+
+  &::before {
+    content: "(";
+    display: inline;
+  }
+
+  &::after {
+    content: ")";
+    display: inline;
+  }
+
+  @include tablet {
+    box-sizing: border-box;
+    display: block;
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    border: solid 1px $color-primary-text;
+    text-align: center;
+    line-height: 32px;
+    font-size: 12px;
+    margin-left: 12px;
+    &::before,
+    &::after {
+      content: none;
+    }
+  }
+}
+
+.main-nav__list {
+  @include list-reset;
+  display: none;
+}
