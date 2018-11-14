@@ -1,5 +1,45 @@
+.social {
+  display: none;
+
+  @include desktop {
+    display: block;
+  }
+}
+
 .social__list {
   @include list-reset;
   margin: 0;
   padding: 0;
+  display: flex;
+  align-items: center;
+  width: 168px;
+  justify-content: space-between;
+}
+
+.social__link {
+  display: block;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &--facebook {
+    background-image: url("../img/facebook.svg");
+    width: 8px;
+    height: 16px;
+  }
+
+  &--instagram {
+    background-image: url("../img/instagram.svg");
+    width: 16px;
+    height: 16px;
+  }
+
+  &--twitter {
+    background-image: url("../img/twitter.svg");
+    width: 16px;
+    height: 12px;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
 }

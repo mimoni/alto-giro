@@ -2,10 +2,26 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 22px;
+
+  @include desktop {
+    width: 92%;
+    max-width: 1578px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 45px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
 .page-footer__menu {
   @include list-reset;
+
+  @include tablet {
+    width: 94%;
+    max-width: 550px;
+  }
 
   display: flex;
   flex-wrap: wrap;
@@ -16,6 +32,12 @@
   margin: 0;
   margin-left: auto;
   margin-right: auto;
+
+  @include desktop {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 445px;
+  }
 }
 
 .page-footer__menu-link {
@@ -45,6 +67,10 @@
   &:hover {
     opacity: 0.7;
   }
+
+  @include desktop {
+    display: block;
+  }
 }
 
 .page-footer__copyright {
@@ -64,4 +90,8 @@
 
 .page-footer__wrapper {
   order: 2;
+
+  @include desktop {
+    order: 0;
+  }
 }

@@ -1,12 +1,21 @@
 .similar {
   max-width: 980px;
   position: relative;
-  background-color: $color-bg;
+  background-color: $light-peach;
   text-align: center;
   margin-top: 230px;
   margin-bottom: 116px;
   margin-left: auto;
   margin-right: auto;
+
+  @include tablet {
+    margin-top: 150px;
+  }
+
+  @include desktop {
+    margin-top: 0;
+    margin-bottom: 166px;
+  }
 
   &::before {
     @include centerX;
@@ -16,6 +25,15 @@
     height: 125px;
     background-color: $color-primary-text;
     top: -185px;
+
+    @include tablet {
+      height: 65px;
+      top: -125px;
+    }
+
+    @include desktop {
+      content: none;
+    }
   }
 }
 
@@ -30,6 +48,12 @@
   margin: 0;
   top: 0;
   transform: translateY(-50%);
+
+  @include desktop {
+    font-size: 50px;
+    line-height: 1.4;
+    letter-spacing: 20px;
+  }
 
   &--desktop {
     display: none;
@@ -49,6 +73,10 @@
 .similar__wrapper {
   position: relative;
   padding-top: 69px;
+
+  @include desktop {
+    padding-top: 105px;
+  }
 }
 
 .similar__control {
@@ -67,6 +95,7 @@
   top: 44%;
   letter-spacing: 3px;
   transform: rotate(-90deg);
+  z-index: 10;
 
   &:hover {
     cursor: pointer;
@@ -83,6 +112,10 @@
     @include tablet {
       left: calc(50% + -320px);
     }
+
+    @include desktop-lg {
+      left: -285px;
+    }
   }
 
   &--next {
@@ -95,6 +128,10 @@
     @include tablet {
       right: calc(50% + -320px);
     }
+
+    @include desktop-lg {
+      right: -285px;
+    }
   }
 
   @include tablet {
@@ -105,13 +142,112 @@
 .similar__image {
   width: 76%;
   max-width: 300px;
+  transition: 400ms;
+
+  @media (min-width: 414px) {
+    width: auto;
+  }
+
+  @include tablet {
+    .is-selected & {
+      max-width: none;
+      width: 426px;
+      height: 655px;
+      object-fit: contain;
+      filter: none;
+      opacity: 1;
+      margin-top: 0;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+
+  @include desktop {
+    margin-top: 152px;
+    width: 228px;
+    height: 345px;
+    filter: grayscale(100%);
+    opacity: 0.7;
+  }
+}
+
+.similar__slider {
+  position: relative;
+  min-height: 450px;
+
+  @media (min-width: 414px) {
+    min-height: 566px;
+  }
+
+  @include tablet {
+    min-height: 755px;
+  }
+
+  @include desktop {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.similar__slide {
+  width: 76%;
+  max-width: 300px;
+  position: absolute;
+  top: 0;
+
+  @include centerX;
 
   @include tablet {
     max-width: none;
     width: 426px;
-    height: 655px;
-    object-fit: contain;
   }
+
+  @include desktop {
+    position: relative;
+    max-width: none;
+    width: 228px;
+    margin-left: 0;
+    margin-right: 0;
+    transform: none;
+    left: auto;
+
+    &:first-child {
+      transform: translateX(-50%);
+    }
+
+    &:last-child {
+      transform: translateX(50%);
+    }
+  }
+}
+
+.similar__slide--lines {
+  position: relative;
+
+  @include desktop-lg {
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      width: 115px;
+      height: 1px;
+      background-color: #000000;
+      top: 325px;
+    }
+
+    &::after {
+      right: -205px;
+    }
+
+    &::before {
+      left: -205px;
+    }
+  }
+}
+
+.is-selected.similar__slide {
+  z-index: 10;
+  width: 426px;
 }
 
 .similar__product-name {
@@ -125,6 +261,10 @@
   @include tablet {
     font-size: 14px;
     line-height: 1.71;
+  }
+
+  @include desktop {
+    margin-top: 39px;
   }
 }
 
@@ -142,6 +282,10 @@
   @include tablet {
     font-size: 12px;
   }
+
+  @include desktop {
+    margin-bottom: 52px;
+  }
 }
 
 .similar__button {
@@ -149,4 +293,17 @@
   margin-right: auto;
   position: relative;
   top: 18px;
+}
+
+.similar__product-name,
+.similar__collection-name {
+  visibility: hidden;
+  opacity: 0;
+  transition: 400ms;
+}
+
+.is-selected .similar__product-name,
+.is-selected .similar__collection-name {
+  visibility: visible;
+  opacity: 1;
 }

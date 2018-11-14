@@ -1,6 +1,73 @@
 .hero {
+  @include desktop {
+    position: relative;
+    padding-bottom: 93px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 68%;
+      top: 0;
+      bottom: 0;
+      z-index: -1;
+      background-image: url("../img/mobile/hero_bg_mobile.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      @include retina {
+        background-image: url("../img/mobile/hero_bg_mobile@2x.png");
+      }
+
+      @include retina-3x {
+        background-image: url("../img/mobile/hero_bg_mobile@3x.png");
+      }
+
+      @include tablet {
+        background-image: url("../img/desktop/hero_bg.png");
+        background-position: top center;
+
+        @include retina {
+          background-image: url("../img/desktop/hero_bg@2x.png");
+        }
+
+        @include retina-3x {
+          background-image: url("../img/desktop/hero_bg@3x.png");
+        }
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 40px;
+      left: 50px;
+      bottom: 50px;
+      width: 68%;
+      background-color: $light-peach;
+      z-index: -2;
+    }
+  }
+}
+
+.hero__wrapper {
   display: flex;
   flex-direction: column;
+
+  @include desktop {
+    width: 92%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-left: 50px;
+    max-width: 1480px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+  }
+
+  @include desktop-lg {
+    width: auto;
+  }
 }
 
 .hero__info {
@@ -10,26 +77,56 @@
   padding-bottom: 180px;
   margin-bottom: 50px;
 
-  &::before {
-    content: "";
-    position: absolute;
-    width: 2px;
-    height: 125px;
-    background-color: $color-primary-text;
-    top: -18px;
-
-    @include centerX;
-  }
-
+  &::before,
   &::after {
     content: "";
     position: absolute;
     width: 2px;
     height: 125px;
     background-color: $color-primary-text;
+
+    @include tablet {
+      height: 65px;
+    }
+  }
+
+  &::before {
+    top: -18px;
+
+    @include centerX;
+
+    @include tablet {
+      top: 0;
+    }
+
+    @include desktop {
+      content: none;
+    }
+  }
+
+  &::after {
     bottom: 0;
 
     @include centerX;
+
+    @include desktop {
+      content: none;
+    }
+  }
+
+  @include tablet {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+
+  @include desktop {
+    order: 0;
+    padding-top: 300px;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    width: 32%;
+    max-width: 450px;
   }
 }
 
@@ -67,6 +164,10 @@
         background-image: url("../img/desktop/hero_bg@3x.png");
       }
     }
+
+    @include desktop {
+      content: none;
+    }
   }
 
   &::after {
@@ -75,8 +176,16 @@
     top: 40px;
     bottom: 40px;
     width: 50%;
-    background-color: $color-bg;
+    background-color: $light-peach;
     z-index: -2;
+
+    @include desktop {
+      content: none;
+    }
+  }
+
+  @include desktop {
+    margin-right: 200px;
   }
 }
 
@@ -88,7 +197,7 @@
   max-width: 300px;
 
   @include tablet {
-    max-width: initial;
+    max-width: none;
     width: 423px;
   }
 }
@@ -99,6 +208,11 @@
   display: flex;
   flex-direction: column;
   right: -7px;
+
+  @include desktop {
+    right: -200px;
+    top: 47%;
+  }
 }
 
 .hero__slider-control {
@@ -106,10 +220,23 @@
   border: none;
   padding: 0;
   margin: 0;
+  margin-bottom: 20px;
   background-color: transparent;
   line-height: 2;
   font-size: 0;
-  margin-bottom: 20px;
+  letter-spacing: 4px;
+
+  @include desktop {
+    margin-bottom: 76px;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+  }
 
   &::after {
     content: "";
@@ -118,32 +245,98 @@
     width: 15px;
     right: 0;
     background-color: $color-primary-text;
+    transition: 300ms;
+
+    @include desktop {
+      width: 0;
+      bottom: -2px;
+    }
   }
 
   &:last-child {
     margin-bottom: 0;
   }
+
+  @include desktop {
+    font-size: 10px;
+    width: 300px;
+    text-align: right;
+    position: relative;
+  }
 }
 
 .hero__slider-control--current::after {
   width: 32px;
+
+  @include desktop {
+    width: 100%;
+  }
 }
 
 .hero__slide {
+  max-width: 300px;
+
+  @include tablet {
+    max-width: none;
+    width: 423px;
+  }
+}
+
+.hero__slider {
   padding-top: 81px;
   padding-bottom: 77px;
+
+  @include desktop {
+    padding-top: 130px;
+    padding-bottom: 60px;
+  }
 }
 
 .hero__image {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 100%;
+  width: 280px;
+  max-width: 300px;
+
+  @media (min-width: 414px) {
+    width: 300px;
+  }
+
+  @include tablet {
+    max-width: none;
+    width: 423px;
+  }
 }
 
-.hero-menu {
+.hero__menu {
   @include list-reset;
   display: none;
+
+  @include desktop {
+    display: flex;
+    width: 100%;
+  }
+
+  li:first-child {
+    margin-right: 65px;
+  }
+
+  li:last-child {
+    margin-left: auto;
+  }
+}
+
+.hero__menu-link {
+  text-decoration: none;
+  color: $color-secondary-text;
+  font-size: 10px;
+  line-height: 2.5;
+  display: block;
+
+  &:hover {
+    opacity: 0.7;
+  }
 }
 
 .hero-form {
@@ -180,8 +373,15 @@
   font-size: 10px;
 
   &:hover {
-    background-color: $color-bg;
+    background-color: $light-peach;
+    border-color: $light-peach;
     cursor: pointer;
+    transition: 300ms;
+
+    @include desktop {
+      background-color: $white;
+      border-color: $white;
+    }
   }
 
   @include tablet {
@@ -209,10 +409,19 @@
   padding: 0;
   text-align: center;
   width: 26px;
+
+  @include desktop {
+    width: 40px;
+  }
 }
 
 .hero-form__button {
   margin-top: 52px;
   margin-left: auto;
   margin-right: auto;
+
+  @include desktop {
+    margin-left: 5px;
+    margin-top: 34px;
+  }
 }

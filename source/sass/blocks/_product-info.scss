@@ -4,24 +4,43 @@
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+
+  @include tablet {
+    width: 37.7%;
+    text-align: left;
+  }
+
+  @include desktop {
+    text-align: left;
+    margin-right: 0;
+    margin-left: 0;
+    margin-top: 150px;
+
+    &--list {
+      margin-top: 412px;
+    }
+
+    &--right {
+      margin-right: 44px;
+    }
+  }
 }
 
 .product-info__subtitle {
   font-size: 10px;
   letter-spacing: 10px;
-  text-align: center;
   color: #000000;
   margin: 0;
 
   @include tablet {
     font-size: 12px;
+    letter-spacing: 12px;
   }
 }
 
 .product-info__title {
   font-size: 25px;
   letter-spacing: 8px;
-  text-align: center;
   line-height: 33px;
   font-weight: 500;
   margin: 0;
@@ -32,12 +51,12 @@
     letter-spacing: 12px;
   }
 
-  &--big {
-
-  }
-
   &--content {
     margin-bottom: 4px;
+  }
+
+  @include desktop {
+    line-height: 1.2;
   }
 }
 
@@ -46,7 +65,6 @@
   font-size: 9px;
   line-height: 1.78;
   letter-spacing: 1px;
-  text-align: center;
   color: $color-secondary-text;
   text-transform: none;
   margin: 0;
@@ -60,6 +78,10 @@
   @include tablet {
     font-size: 14px;
     line-height: 1.79;
+  }
+
+  @include desktop {
+    line-height: 2.5;
   }
 }
 
@@ -76,6 +98,12 @@
   text-transform: none;
   margin-top: 0;
   margin-bottom: 36px;
+
+  @include desktop {
+    font-size: 14px;
+    line-height: 2.5;
+    margin-top: 8px;
+  }
 }
 
 .product-info__item {

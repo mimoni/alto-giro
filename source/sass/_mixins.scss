@@ -10,8 +10,8 @@
   }
 }
 
-@mixin mobile-only {
-  @media (max-width: $mobile-width-only) {
+@mixin desktop-lg {
+  @media (min-width: $desktop-lg-width) {
     @content;
   }
 }

@@ -70,7 +70,7 @@ gulp.task("html", () => {
 });
 
 gulp.task("scripts", () => {
-  return gulp.src("source/js/*.js")
+  return gulp.src(["source/js/lib/*.js", "source/js/main.js"])
     .pipe(plumber())
     .pipe(babel({
       presets: ['@babel/env']
@@ -86,6 +86,7 @@ gulp.task("scripts", () => {
 gulp.task("copy", () => {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2,ttf,eot}",
+    "source/js/lib/*.js",
     "source/img/**/*.{jpg,png,svg}",
   ], {
     base: "source"

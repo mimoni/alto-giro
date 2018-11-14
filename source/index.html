@@ -37,73 +37,110 @@
 
 <main class="page-main">
   <section class="hero">
-    <div class="hero__info product-info">
-      <p class="product-info__subtitle">Collection</p>
-      <h1 class="product-info__title product-info__title--big">Bikini — Mykonos</h1>
-      <p class="product-info__description">
-        The same top of the line accessories you’re used to but we have formulated these specifically for your activite lifestyle.
-      </p>
+    <div class="hero__wrapper">
+      <div class="hero__info product-info">
+        <p class="product-info__subtitle">Collection</p>
+        <h1 class="product-info__title">Bikini — Mykonos</h1>
+        <p class="product-info__description">
+          The same top of the line accessories you’re used to but we have formulated these specifically for your activite lifestyle.
+        </p>
 
-      <form class="hero-form" action="#" method="post">
-        <div class="hero-form__select-wrapper">
-          <select class="hero-form__select">
-            <option disabled selected hidden>Pick a color</option>
-            <option value="black">Black</option>
-            <option value="white">White</option>
-            <option value="pink">Pink</option>
-          </select>
+        <form class="hero-form" action="#" method="post">
+          <div class="hero-form__select-wrapper">
+            <select class="hero-form__select">
+              <option disabled selected hidden>Pick a color</option>
+              <option value="black">Black</option>
+              <option value="white">White</option>
+              <option value="pink">Pink</option>
+            </select>
 
-          <div class="hero-form__quantity">
-            <button class="hero-form__btn hero-form__btn-minus" type="button">-</button>
-            <input class="hero-form__amount" type="text" value="1">
-            <button class="hero-form__btn hero-form__btn-plus" type="button">+</button>
+            <div class="hero-form__quantity">
+              <button class="hero-form__btn hero-form__btn-minus" type="button">-</button>
+              <input class="hero-form__amount" type="text" value="1">
+              <button class="hero-form__btn hero-form__btn-plus" type="button">+</button>
+            </div>
           </div>
-        </div>
 
-        <button class="hero-form__button button" type="submit">Add to cart</button>
-      </form>
-    </div>
+          <button class="hero-form__button button" type="submit">Add to cart</button>
+        </form>
+      </div>
 
-    <div class="hero__slider-wrapper">
-      <div class="hero__slider-controls">
-        <div class="hero__slider">
-          <div class="hero__slide">
-            <picture>
-              <source type="image/webp" media="(min-width: 768px)"
-                      srcset="./img/desktop/hero_slider_1.webp 1x, ./img/desktop/hero_slider_1@2x.webp 2x, ./img/desktop/hero_slider_1@3x.webp 3x">
-              <source type="image/webp"
-                      srcset="./img/mobile/hero_slider_1_mobile.webp 1x, ./img/mobile/hero_slider_1_mobile@2x.webp 2x, ./img/mobile/hero_slider_1_mobile@3x.webp 3x">
+      <div class="hero__slider-wrapper">
+        <div class="hero__slider-controls">
+          <div class="swiper-hero-slider">
+            <div class="hero__slider swiper-wrapper">
+              <div class="hero__slide">
+                <picture>
+                  <source type="image/webp" media="(min-width: 768px)"
+                          srcset="./img/desktop/hero_slider_1.webp 1x, ./img/desktop/hero_slider_1@2x.webp 2x, ./img/desktop/hero_slider_1@3x.webp 3x">
+                  <source type="image/webp"
+                          srcset="./img/mobile/hero_slider_1_mobile.webp 1x, ./img/mobile/hero_slider_1_mobile@2x.webp 2x, ./img/mobile/hero_slider_1_mobile@3x.webp 3x">
 
-              <source media="(min-width: 768px)"
-                      srcset="./img/desktop/hero_slider_1.jpg 1x, ./img/desktop/hero_slider_1@2x.jpg 2x, ./img/desktop/hero_slider_1@3x.jpg 3x">
+                  <source media="(min-width: 768px)"
+                          srcset="./img/desktop/hero_slider_1.jpg 1x, ./img/desktop/hero_slider_1@2x.jpg 2x, ./img/desktop/hero_slider_1@3x.jpg 3x">
 
-              <img class="hero__image" src="./img/mobile/hero_slider_1_mobile.jpg"
-                   srcset="./img/mobile/hero_slider_1_mobile@2x.jpg 2x, ./img/mobile/hero_slider_1_mobile@3x.jpg 3x" alt="Slider 1" width="300"
-                   height="499">
-            </picture>
+                  <img class="hero__image" src="./img/mobile/hero_slider_1_mobile.jpg"
+                       srcset="./img/mobile/hero_slider_1_mobile@2x.jpg 2x, ./img/mobile/hero_slider_1_mobile@3x.jpg 3x" alt="Slider 1"
+                       width="300"
+                       height="499">
+                </picture>
+              </div>
+              <div class="hero__slide">
+                <picture>
+                  <source type="image/webp" media="(min-width: 768px)"
+                          srcset="./img/desktop/hero_slider_1.webp 1x, ./img/desktop/hero_slider_1@2x.webp 2x, ./img/desktop/hero_slider_1@3x.webp 3x">
+                  <source type="image/webp"
+                          srcset="./img/mobile/hero_slider_1_mobile.webp 1x, ./img/mobile/hero_slider_1_mobile@2x.webp 2x, ./img/mobile/hero_slider_1_mobile@3x.webp 3x">
+
+                  <source media="(min-width: 768px)"
+                          srcset="./img/desktop/hero_slider_1.jpg 1x, ./img/desktop/hero_slider_1@2x.jpg 2x, ./img/desktop/hero_slider_1@3x.jpg 3x">
+
+                  <img class="hero__image" src="./img/mobile/hero_slider_1_mobile.jpg"
+                       srcset="./img/mobile/hero_slider_1_mobile@2x.jpg 2x, ./img/mobile/hero_slider_1_mobile@3x.jpg 3x" alt="Slider 1"
+                       width="300"
+                       height="499">
+                </picture>
+              </div>
+              <div class="hero__slide">
+                <picture>
+                  <source type="image/webp" media="(min-width: 768px)"
+                          srcset="./img/desktop/hero_slider_1.webp 1x, ./img/desktop/hero_slider_1@2x.webp 2x, ./img/desktop/hero_slider_1@3x.webp 3x">
+                  <source type="image/webp"
+                          srcset="./img/mobile/hero_slider_1_mobile.webp 1x, ./img/mobile/hero_slider_1_mobile@2x.webp 2x, ./img/mobile/hero_slider_1_mobile@3x.webp 3x">
+
+                  <source media="(min-width: 768px)"
+                          srcset="./img/desktop/hero_slider_1.jpg 1x, ./img/desktop/hero_slider_1@2x.jpg 2x, ./img/desktop/hero_slider_1@3x.jpg 3x">
+
+                  <img class="hero__image" src="./img/mobile/hero_slider_1_mobile.jpg"
+                       srcset="./img/mobile/hero_slider_1_mobile@2x.jpg 2x, ./img/mobile/hero_slider_1_mobile@3x.jpg 3x" alt="Slider 1"
+                       width="300"
+                       height="499">
+                </picture>
+              </div>
+            </div>
           </div>
-        </div>
 
-        <div class="hero__controls">
-          <button class="hero__slider-control">IMG 001</button>
-          <button class="hero__slider-control hero__slider-control--current">IMG 002</button>
-          <button class="hero__slider-control">IMG 003</button>
+          <div class="hero__controls">
+            <button class="hero__slider-control">IMG 001</button>
+            <button class="hero__slider-control hero__slider-control--current">IMG 002</button>
+            <button class="hero__slider-control">IMG 003</button>
+          </div>
         </div>
       </div>
-    </div>
 
-    <ul class="hero-menu">
-      <li class="hero-menu__link">About this item</li>
-      <li class="hero-menu__link">Similar items</li>
-      <li class="hero-menu__link">Scroll down</li>
-    </ul>
+      <ul class="hero__menu">
+        <li><a class="hero__menu-link" href="#item-info">About this item</a></li>
+        <li><a class="hero__menu-link" href="#similar">Similar items</a></li>
+        <li><a class="hero__menu-link" href="#footer">Scroll down</a></li>
+      </ul>
+    </div>
   </section>
 
   <section class="content">
     <div class="content__wrapper">
-      <div class="content__photo">
+      <div class="content__photo content__photo--first">
         <picture>
-          <source type="image/webp" media="(min-width: 768px)"
+          <source type="image/webp" media="(min-width: 1280px)"
                   srcset="./img/desktop/photo_1.webp 1x, ./img/desktop/photo_1@2x.webp 2x, ./img/desktop/photo_1@3x.webp 3x">
           <source type="image/webp"
                   srcset="./img/mobile/photo_1_mobile.webp 1x, ./img/mobile/photo_1_mobile@2x.webp 2x, ./img/mobile/photo_1_mobile@3x.webp 3x">
@@ -116,7 +153,7 @@
         </picture>
       </div>
 
-      <div class="product-info">
+      <div class="product-info product-info--right">
         <p class="product-info__subtitle">Bikini info</p>
         <h1 class="product-info__title product-info__title--content">Mykonos</h1>
         <p class="product-info__description product-info__description--line">
@@ -138,8 +175,8 @@
       <p class="content__promo-slogan">The highest quality</p>
     </div>
 
-    <div class="content__wrapper">
-      <div class="product-info">
+    <div id="item-info" class="content__wrapper content__wrapper--last">
+      <div class="product-info product-info--list">
         <p class="product-info__subtitle">High quality</p>
         <h1 class="product-info__title product-info__title--content">Materials used</h1>
 
@@ -152,9 +189,9 @@
         </ul>
       </div>
 
-      <div class="content__photo">
+      <div class="content__photo content__photo--second">
         <picture>
-          <source type="image/webp" media="(min-width: 768px)"
+          <source type="image/webp" media="(min-width: 1280px)"
                   srcset="./img/desktop/photo_2.webp 1x, ./img/desktop/photo_2@2x.webp 2x, ./img/desktop/photo_2@3x.webp 3x">
           <source type="image/webp"
                   srcset="./img/mobile/photo_2_mobile.webp 1x, ./img/mobile/photo_2_mobile@2x.webp 2x, ./img/mobile/photo_2_mobile@3x.webp 3x">
@@ -169,7 +206,7 @@
     </div>
   </section>
 
-  <section class="similar">
+  <section id="similar" class="similar">
     <h2 class="similar__title">
       <span class="similar__title--mobile">Similar </span>
       <span class="similar__title--desktop">Related items</span>
@@ -179,58 +216,64 @@
       <button class="similar__control similar__control--prev">prev item</button>
 
       <div class="similar__slider">
-        <div style="display: none" class="similar__slide">
-          <picture>
-            <source type="image/webp" media="(min-width: 768px)"
-                    srcset="./img/desktop/slider_1.webp 1x, ./img/desktop/slider_1@2x.webp 2x, ./img/desktop/slider_1@3x.webp 3x">
-            <source type="image/webp"
-                    srcset="./img/mobile/slider_1_mobile.webp 1x, ./img/mobile/slider_1_mobile@2x.webp 2x, ./img/mobile/slider_1_mobile@3x.webp 3x">
+        <div class="similar__slide">
+          <div class="similar__image-wrapper">
+            <picture>
+              <source type="image/webp" media="(min-width: 768px)"
+                      srcset="./img/desktop/slider_1.webp 1x, ./img/desktop/slider_1@2x.webp 2x, ./img/desktop/slider_1@3x.webp 3x">
+              <source type="image/webp"
+                      srcset="./img/mobile/slider_1_mobile.webp 1x, ./img/mobile/slider_1_mobile@2x.webp 2x, ./img/mobile/slider_1_mobile@3x.webp 3x">
 
-            <source media="(min-width: 768px)"
-                    srcset="./img/desktop/slider_1.jpg 1x, ./img/desktop/slider_1@2x.jpg 2x, ./img/desktop/slider_1@3x.jpg 3x">
+              <source media="(min-width: 768px)"
+                      srcset="./img/desktop/slider_1.jpg 1x, ./img/desktop/slider_1@2x.jpg 2x, ./img/desktop/slider_1@3x.jpg 3x">
 
-            <img class="similar__image" src="./img/mobile/slider_1_mobile.jpg"
-                 srcset="./img/mobile/slider_1_mobile@2x.jpg 2x, ./img/mobile/slider_1_mobile@3x.jpg 3x" alt="Slider 1" width="300"
-                 height="461">
-          </picture>
+              <img class="similar__image" src="./img/mobile/slider_1_mobile.jpg"
+                   srcset="./img/mobile/slider_1_mobile@2x.jpg 2x, ./img/mobile/slider_1_mobile@3x.jpg 3x" alt="Slider 1" width="300"
+                   height="461">
+            </picture>
+          </div>
 
           <div class="similar__product-name">BATHING SUIT 3 — $85</div>
           <div class="similar__collection-name">New Swimwear Collection</div>
         </div>
 
-        <div class="similar__slide">
-          <picture>
-            <source type="image/webp" media="(min-width: 768px)"
-                    srcset="./img/desktop/slider_2.webp 1x, ./img/desktop/slider_2@2x.webp 2x, ./img/desktop/slider_2@3x.webp 3x">
-            <source type="image/webp"
-                    srcset="./img/mobile/slider_2_mobile.webp 1x, ./img/mobile/slider_2_mobile@2x.webp 2x, ./img/mobile/slider_2_mobile@3x.webp 3x">
+        <div class="similar__slide similar__slide--lines is-selected">
+          <div class="similar__image-wrapper">
+            <picture>
+              <source type="image/webp" media="(min-width: 768px)"
+                      srcset="./img/desktop/slider_2.webp 1x, ./img/desktop/slider_2@2x.webp 2x, ./img/desktop/slider_2@3x.webp 3x">
+              <source type="image/webp"
+                      srcset="./img/mobile/slider_2_mobile.webp 1x, ./img/mobile/slider_2_mobile@2x.webp 2x, ./img/mobile/slider_2_mobile@3x.webp 3x">
 
-            <source media="(min-width: 768px)"
-                    srcset="./img/desktop/slider_2.jpg 1x, ./img/desktop/slider_2@2x.jpg 2x, ./img/desktop/slider_2@3x.jpg 3x">
+              <source media="(min-width: 768px)"
+                      srcset="./img/desktop/slider_2.jpg 1x, ./img/desktop/slider_2@2x.jpg 2x, ./img/desktop/slider_2@3x.jpg 3x">
 
-            <img class="similar__image" src="./img/mobile/slider_2_mobile.jpg"
-                 srcset="./img/mobile/slider_2_mobile@2x.jpg 2x, ./img/mobile/slider_2_mobile@3x.jpg 3x" alt="Slider 2" width="300"
-                 height="461">
-          </picture>
+              <img class="similar__image" src="./img/mobile/slider_2_mobile.jpg"
+                   srcset="./img/mobile/slider_2_mobile@2x.jpg 2x, ./img/mobile/slider_2_mobile@3x.jpg 3x" alt="Slider 2" width="300"
+                   height="461">
+            </picture>
+          </div>
 
           <div class="similar__product-name">BATHING SUIT 1 — $55</div>
           <div class="similar__collection-name">New Swimwear Collection</div>
         </div>
 
-        <div style="display: none" class="similar__slide">
-          <picture>
-            <source type="image/webp" media="(min-width: 768px)"
-                    srcset="./img/desktop/slider_3.webp 1x, ./img/desktop/slider_3@2x.webp 2x, ./img/desktop/slider_3@3x.webp 3x">
-            <source type="image/webp"
-                    srcset="./img/mobile/slider_3_mobile.webp 1x, ./img/mobile/slider_3_mobile@2x.webp 2x, ./img/mobile/slider_3_mobile@3x.webp 3x">
+        <div class="similar__slide">
+          <div class="similar__image-wrapper">
+            <picture>
+              <source type="image/webp" media="(min-width: 768px)"
+                      srcset="./img/desktop/slider_3.webp 1x, ./img/desktop/slider_3@2x.webp 2x, ./img/desktop/slider_3@3x.webp 3x">
+              <source type="image/webp"
+                      srcset="./img/mobile/slider_3_mobile.webp 1x, ./img/mobile/slider_3_mobile@2x.webp 2x, ./img/mobile/slider_3_mobile@3x.webp 3x">
 
-            <source media="(min-width: 768px)"
-                    srcset="./img/desktop/slider_3.jpg 1x, ./img/desktop/slider_3@2x.jpg 2x, ./img/desktop/slider_3@3x.jpg 3x">
+              <source media="(min-width: 768px)"
+                      srcset="./img/desktop/slider_3.jpg 1x, ./img/desktop/slider_3@2x.jpg 2x, ./img/desktop/slider_3@3x.jpg 3x">
 
-            <img class="similar__image" src="./img/mobile/slider_3_mobile.jpg"
-                 srcset="./img/mobile/slider_3_mobile@2x.jpg 2x, ./img/mobile/slider_3_mobile@3x.jpg 3x" alt="Slider 3" width="300"
-                 height="461">
-          </picture>
+              <img class="similar__image" src="./img/mobile/slider_3_mobile.jpg"
+                   srcset="./img/mobile/slider_3_mobile@2x.jpg 2x, ./img/mobile/slider_3_mobile@3x.jpg 3x" alt="Slider 3" width="300"
+                   height="461">
+            </picture>
+          </div>
 
           <div class="similar__product-name">BATHING SUIT 2 — $155</div>
           <div class="similar__collection-name">New Swimwear Collection</div>
@@ -244,7 +287,7 @@
   </section>
 </main>
 
-<footer class="page-footer">
+<footer id="footer" class="page-footer">
   <div class="page-footer__wrapper">
     <a class="page-footer__logo" href="/">Alto giro</a>
     <p class="page-footer__copyright">© 2017 Alto Giro, All rights reserved</p>
@@ -281,7 +324,12 @@
 </footer>
 
 <!-- build:js -->
-<script src="./js/picturefill.min.js"></script>
+<script src="./js/lib/hammer.min.js"></script>
+<script src="./js/lib/picturefill.min.js"></script>
+<script src="./js/lib/matches.selector.polifyll.js"></script>
+<script src="js/lib/ie.polyfill.js"></script>
+<script src="./js/lib/flickity.pkgd.min.js"></script>
+<script src="./js/lib/scroll.js"></script>
 <script src="./js/main.js"></script>
 <!-- endbuild -->
 </body>
